@@ -1,0 +1,2266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#2b040a">
+  <meta name="description" content="Royal Wedding Invitation for the celebrations of M. Abubakar Asif | Mehndi, Barat & Walima - November 2026">
+  <title>Wedding Invitation | M. Abubakar Asif</title>
+
+  <!-- Google Fonts: Royal Calligraphy, Serifs, and Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       ROYAL WEDDING INVITATION - PRISTINE CREAM & 24K GOLD LUXURY THEME
+       Palette: Deep Burgundy Velvet, Burnished 24K Gold, Pristine Ivory/Cream
+       ========================================================================== */
+    :root {
+      --maroon-deep: #140104;
+      --maroon-dark: #240307;
+      --maroon-velvet: #3a050e;
+      --maroon-rich: #4f0a15;
+      --maroon-accent: #721120;
+      --maroon-text: #3c0911;
+      
+      --gold-light: #fff8e0;
+      --gold-shimmer: #fdedb4;
+      --gold-bright: #e7c564;
+      --gold-metallic: #d4af37;
+      --gold-deep: #aa771c;
+      --gold-dark: #6e4c0e;
+      --gold-gradient: linear-gradient(135deg, #fff7dc 0%, #ecd077 30%, #d4af37 60%, #9e7019 85%, #fce7a2 100%);
+      --gold-border: linear-gradient(135deg, #fcedba, #d4af37, #9a741c, #e7c564);
+      
+      --font-script: 'Pinyon Script', cursive;
+      --font-royal-serif: 'Playfair Display', serif;
+      --font-classical-serif: 'Cinzel', serif;
+      --font-poetic-serif: 'Cormorant Garamond', serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--maroon-deep);
+    }
+
+    body {
+      background-color: var(--maroon-deep);
+      color: #fff;
+      font-family: var(--font-poetic-serif);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom Royal Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--maroon-deep);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--gold-deep), var(--gold-metallic), var(--gold-deep));
+      border-radius: 4px;
+    }
+
+    /* Ambient Rose Petals Canvas */
+    #petals-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    /* ==========================================================================
+       ROYAL BACKGROUND & ATMOSPHERE (Deep Velvet, Real Lantern, Roses)
+       ========================================================================== */
+    .royal-background {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    /* Multi-layered luxurious velvet backdrop with deep radial shading */
+    .royal-background::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 50% 20%, rgba(110, 16, 32, 0.55) 0%, rgba(36, 3, 7, 0.94) 60%, #110103 100%),
+        radial-gradient(circle at 12% 80%, rgba(130, 20, 40, 0.4) 0%, transparent 55%),
+        radial-gradient(circle at 88% 18%, rgba(130, 20, 40, 0.45) 0%, transparent 55%);
+    }
+
+    /* Velvet Drapery Folds on the borders */
+    .velvet-drape-left, .velvet-drape-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: clamp(75px, 13vw, 190px);
+      z-index: 1;
+      opacity: 0.9;
+    }
+    .velvet-drape-left {
+      left: 0;
+      background: linear-gradient(90deg, 
+        rgba(18, 1, 4, 0.98) 0%, 
+        rgba(58, 5, 14, 0.88) 35%, 
+        rgba(18, 1, 4, 0.92) 70%, 
+        transparent 100%);
+      border-right: 1px solid rgba(212, 175, 55, 0.28);
+    }
+    .velvet-drape-right {
+      right: 0;
+      background: linear-gradient(270deg, 
+        rgba(18, 1, 4, 0.98) 0%, 
+        rgba(58, 5, 14, 0.88) 35%, 
+        rgba(18, 1, 4, 0.92) 70%, 
+        transparent 100%);
+      border-left: 1px solid rgba(212, 175, 55, 0.28);
+    }
+
+    /* Hanging Antique Brass Lantern (Real Transparent PNG) */
+    .hanging-lantern-wrap {
+      position: fixed;
+      top: -15px;
+      right: clamp(15px, 6vw, 65px);
+      width: clamp(80px, 10vw, 120px);
+      z-index: 10;
+      transform-origin: top center;
+      animation: lanternSwing 6.5s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes lanternSwing {
+      0% { transform: rotate(-3deg); }
+      100% { transform: rotate(3deg); }
+    }
+    .real-lantern-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 15px 30px rgba(255, 190, 50, 0.45)) drop-shadow(0 25px 40px rgba(0,0,0,0.9));
+    }
+    .lantern-candle-glow {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 200, 70, 0.7) 0%, rgba(255, 120, 20, 0.3) 50%, transparent 75%);
+      animation: glowFlicker 2s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: -1;
+    }
+    @keyframes glowFlicker {
+      0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.7; }
+      50% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.95; }
+      100% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.75; }
+    }
+
+    /* Real Burgundy Roses Bouquet (Top Left Corner) */
+    .floral-accent-top-left {
+      position: fixed;
+      top: -10px;
+      left: -10px;
+      width: clamp(140px, 18vw, 260px);
+      height: auto;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .real-roses-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.92)) drop-shadow(0 0 15px rgba(180, 20, 40, 0.3));
+    }
+
+    /* Bottom Decorative Gold Velvet Border & Petal Corner */
+    .floral-accent-bottom-right {
+      position: fixed;
+      bottom: -10px;
+      right: 0;
+      width: clamp(140px, 20vw, 280px);
+      height: auto;
+      z-index: 5;
+      pointer-events: none;
+      filter: drop-shadow(0 -10px 20px rgba(0,0,0,0.7));
+    }
+
+    /* ==========================================================================
+       FLOATING CONTROLS (Petals Toggle Only)
+       ========================================================================== */
+    .floating-controls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 100;
+    }
+    .control-pill-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(35, 4, 9, 0.92);
+      border: 1px solid var(--gold-metallic);
+      color: var(--gold-shimmer);
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-family: var(--font-classical-serif);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.65), 0 0 12px rgba(212,175,55,0.3);
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .control-pill-btn:hover {
+      background: var(--maroon-accent);
+      color: #fff;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.85), 0 0 20px rgba(212,175,55,0.55);
+    }
+    .control-pill-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ==========================================================================
+       SECTION 1: 3D ROYAL WEDDING ENVELOPE UNBOXING EXPERIENCE
+       "Real Wedding Card Brought to Your House" Physical Presentation
+       ========================================================================== */
+    #welcome-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: radial-gradient(circle at 50% 30%, #3e0711, #1e0206 70%, #0d0103 100%);
+      perspective: 1200px;
+      transition: opacity 1.2s cubic-bezier(0.7, 0, 0.3, 1), visibility 1.2s;
+    }
+    #welcome-screen.unveiled {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Physical 3D Envelope Container */
+    .royal-envelope-3d {
+      position: relative;
+      width: 100%;
+      max-width: 530px;
+      background: linear-gradient(145deg, #2a0309, #420712 45%, #1f0206 100%);
+      border: 2px solid var(--gold-metallic);
+      border-radius: 8px;
+      box-shadow: 
+        0 30px 70px rgba(0,0,0,0.95), 
+        0 0 40px rgba(212, 175, 55, 0.3),
+        inset 0 0 25px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: clamp(35px, 6vw, 55px) clamp(20px, 5vw, 42px);
+      cursor: pointer;
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .royal-envelope-3d:hover {
+      transform: translateY(-6px) scale(1.01);
+    }
+    .royal-envelope-3d::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-radius: 6px;
+      pointer-events: none;
+    }
+
+    /* Shahi Gold Ribbon Strip across envelope */
+    .envelope-gold-ribbon {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 52%;
+      height: 38px;
+      transform: translateY(-50%);
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(212, 175, 55, 0.25) 15%, 
+        rgba(255, 235, 170, 0.85) 50%, 
+        rgba(212, 175, 55, 0.25) 85%, 
+        transparent 100%);
+      border-top: 1px solid var(--gold-metallic);
+      border-bottom: 1px solid var(--gold-metallic);
+      pointer-events: none;
+    }
+
+    /* Real 3D Stamped Monogram Wax Seal */
+    .wax-seal-container {
+      position: relative;
+      width: clamp(100px, 18vw, 130px);
+      height: clamp(100px, 18vw, 130px);
+      margin: 15px auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.85)) drop-shadow(0 0 20px rgba(212,175,55,0.6));
+      transition: transform 0.35s ease;
+      z-index: 5;
+    }
+    .royal-envelope-3d:hover .wax-seal-container {
+      transform: scale(1.08) rotate(2deg);
+    }
+    .real-wax-seal-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      animation: pulseSeal 3s infinite alternate;
+    }
+    @keyframes pulseSeal {
+      0% { filter: drop-shadow(0 0 10px rgba(212,175,55,0.4)); }
+      100% { filter: drop-shadow(0 0 25px rgba(255,235,160,0.85)); }
+    }
+
+    .bismillah-header {
+      font-family: var(--font-classical-serif);
+      color: var(--gold-shimmer);
+      font-size: clamp(22px, 5vw, 30px);
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+    .bismillah-sub {
+      font-family: var(--font-classical-serif);
+      font-size: 9.5px;
+      letter-spacing: 4px;
+      color: #e5c388;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .royal-heading {
+      font-family: var(--font-royal-serif);
+      font-size: clamp(32px, 6.5vw, 50px);
+      font-weight: 700;
+      color: #fff6e0;
+      line-height: 1.15;
+      margin-bottom: 10px;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.8);
+    }
+    .royal-heading span {
+      display: block;
+      font-family: var(--font-script);
+      font-size: clamp(48px, 9.5vw, 74px);
+      color: var(--gold-shimmer);
+      font-weight: 400;
+      line-height: 0.95;
+      margin: 6px 0;
+      text-shadow: 0 0 15px rgba(231,197,100,0.45);
+    }
+
+    .groom-welcome-badge {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 10px 24px;
+      border-top: 1px solid var(--gold-metallic);
+      border-bottom: 1px solid var(--gold-metallic);
+    }
+    .groom-welcome-badge small {
+      display: block;
+      font-family: var(--font-classical-serif);
+      font-size: 10px;
+      letter-spacing: 3.5px;
+      color: var(--gold-bright);
+      text-transform: uppercase;
+    }
+    .groom-welcome-badge strong {
+      font-family: var(--font-royal-serif);
+      font-size: clamp(22px, 5vw, 32px);
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .btn-open-envelope {
+      position: relative;
+      background: var(--gold-gradient);
+      border: 1px solid #fff;
+      color: #2b040a;
+      font-family: var(--font-classical-serif);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7), 0 0 25px rgba(212, 175, 55, 0.6);
+      transition: all 0.4s ease;
+      overflow: hidden;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .btn-open-envelope::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent);
+      animation: shimmerBtn 3s infinite;
+    }
+    @keyframes shimmerBtn {
+      0% { left: -100%; }
+      30%, 100% { left: 100%; }
+    }
+    .btn-open-envelope:hover {
+      transform: scale(1.05);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.85), 0 0 35px rgba(255, 230, 150, 0.9);
+      color: #1a0206;
+    }
+
+    /* ==========================================================================
+       SECTION 2: MAIN INVITATION SUITE (Interactive Deck & Event Cards)
+       ========================================================================== */
+    #main-content {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      padding: clamp(30px, 5vw, 60px) 16px clamp(60px, 8vw, 100px);
+      max-width: 1150px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #main-content.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Top Royal Header */
+    .invitation-suite-header {
+      text-align: center;
+      margin-bottom: clamp(30px, 5vw, 45px);
+    }
+    .invitation-suite-header .royal-crest {
+      color: var(--gold-metallic);
+      font-size: 26px;
+      letter-spacing: 12px;
+      margin-bottom: 8px;
+    }
+    .invitation-suite-header .ceremony-label {
+      font-family: var(--font-classical-serif);
+      font-size: clamp(11px, 2.5vw, 13px);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-bottom: 8px;
+    }
+    .invitation-suite-header h1 {
+      font-family: var(--font-royal-serif);
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 700;
+      color: #fff9ea;
+      margin-bottom: 6px;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.7);
+    }
+    .invitation-suite-header p {
+      font-size: clamp(17px, 3.5vw, 22px);
+      color: #edd9b6;
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       EVENT NAVIGATION: 3 PHYSICAL INVITATION INSERTS (MEHNDI FIRST!)
+       ========================================================================== */
+    .event-menu-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: clamp(10px, 2.5vw, 22px);
+      flex-wrap: wrap;
+      margin: 0 auto clamp(30px, 5vw, 50px);
+      max-width: 850px;
+    }
+    .event-tab-btn {
+      flex: 1 1 200px;
+      max-width: 250px;
+      min-width: 170px;
+      background: linear-gradient(145deg, rgba(46, 4, 11, 0.92), rgba(24, 2, 5, 0.96));
+      border: 1.5px solid rgba(212, 175, 55, 0.45);
+      border-radius: 6px;
+      padding: 16px 14px;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.65);
+      transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
+    }
+    .event-tab-btn::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 4px;
+      pointer-events: none;
+      transition: border-color 0.35s;
+    }
+    .event-tab-btn:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-metallic);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.8), 0 0 20px rgba(212,175,55,0.3);
+    }
+    .event-tab-btn.active {
+      background: linear-gradient(145deg, rgba(92, 12, 26, 0.98), rgba(46, 4, 11, 0.98));
+      border-color: var(--gold-shimmer);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.88), 0 0 25px rgba(212,175,55,0.5);
+      transform: translateY(-4px);
+    }
+    .event-tab-btn.active::before {
+      border-color: rgba(255, 237, 180, 0.65);
+    }
+    .tab-icon {
+      font-size: 24px;
+      margin-bottom: 6px;
+      display: inline-block;
+      transition: transform 0.35s;
+    }
+    .event-tab-btn:hover .tab-icon, .event-tab-btn.active .tab-icon {
+      transform: scale(1.18);
+    }
+    .tab-title {
+      font-family: var(--font-royal-serif);
+      font-size: clamp(20px, 3.5vw, 26px);
+      font-weight: 700;
+      color: #fff5e0;
+      margin-bottom: 3px;
+    }
+    .tab-date {
+      font-family: var(--font-classical-serif);
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      color: var(--gold-bright);
+      text-transform: uppercase;
+    }
+    .tab-indicator {
+      width: 0;
+      height: 2px;
+      background: var(--gold-gradient);
+      margin: 8px auto 0;
+      transition: width 0.35s ease;
+    }
+    .event-tab-btn.active .tab-indicator {
+      width: 50px;
+    }
+
+    /* ==========================================================================
+       SECTION 3: 3D INTERACTIVE ARCH INVITATION CARD (PRISTINE CREAM & GOLD)
+       Mughal Arch Contour, Clean Royal Ivory Surface, Smooth 3D Tilt
+       ========================================================================== */
+    .card-deck-container {
+      position: relative;
+      width: 100%;
+      max-width: 630px;
+      margin: 0 auto;
+      perspective: 1200px;
+    }
+
+    .invitation-card {
+      position: relative;
+      width: 100%;
+      filter: drop-shadow(0 35px 70px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 35px rgba(212, 175, 55, 0.22));
+      opacity: 0;
+      transform: translateY(30px) scale(0.98);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      display: none;
+      transform-style: preserve-3d;
+    }
+    .invitation-card.active-card {
+      display: block;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      animation: physicalCardSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes physicalCardSlideIn {
+      from { opacity: 0; transform: translateY(35px) scale(0.96) rotateX(4deg); }
+      to { opacity: 1; transform: translateY(0) scale(1) rotateX(0deg); }
+    }
+
+    /* Holographic Specular Gold Foil Reflection Layer (Moves with Mouse / Touch) */
+    .card-foil-glare {
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 245, 210, 0.45) 0%, rgba(212, 175, 55, 0.15) 30%, transparent 65%);
+      transition: opacity 0.3s ease;
+      mix-blend-mode: overlay;
+    }
+    .invitation-card:hover .card-foil-glare {
+      opacity: 1;
+    }
+
+    /* SVG Arch Frame Background - Clean, Pristine Royal Cream Gradient */
+    .card-arch-frame-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
+    }
+
+    /* Interior Card Content Canvas */
+    .card-content-inner {
+      position: relative;
+      z-index: 2;
+      padding: clamp(100px, 14vw, 130px) clamp(30px, 5.2vw, 48px) clamp(40px, 6vw, 60px);
+      text-align: center;
+      color: var(--maroon-text);
+      box-sizing: border-box;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Card Typography Elements */
+    .card-bismillah {
+      position: absolute;
+      top: clamp(22px, 3.8vw, 36px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-classical-serif);
+      font-size: clamp(20px, 3.2vw, 25px);
+      color: #aa771c;
+      letter-spacing: 2px;
+      line-height: 1;
+      pointer-events: none;
+      z-index: 3;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    }
+    .card-eyebrow {
+      font-family: var(--font-classical-serif);
+      font-size: clamp(8.5px, 1.8vw, 10.5px);
+      letter-spacing: clamp(1px, 0.25vw, 1.8px);
+      text-transform: uppercase;
+      color: #61111e;
+      font-weight: 600;
+      max-width: min(340px, 90%);
+      margin: 0 auto 8px;
+      line-height: 1.45;
+      padding: 0 8px;
+      word-spacing: 1.5px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Gold Geometric Divider (Matches Image — ❖ —) */
+    .gold-filigree-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 8px auto;
+      max-width: 260px;
+    }
+    .gold-filigree-divider::before, .gold-filigree-divider::after {
+      content: '';
+      flex: 1;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, #b8860b 40%, #d4af37 80%, transparent);
+    }
+    .gold-filigree-divider::after {
+      background: linear-gradient(270deg, transparent, #b8860b 40%, #d4af37 80%, transparent);
+    }
+    .gold-flourish-diamond {
+      color: #aa771c;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    /* Event Name in Flowing Masterpiece Script (Walima / Mehndi / Barat) */
+    .card-event-name {
+      font-family: var(--font-script);
+      font-size: clamp(52px, 11vw, 86px);
+      line-height: 0.95;
+      color: #4a0b16;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9), 0 2px 6px rgba(74, 11, 22, 0.15);
+      margin: 4px 0 0;
+      word-break: break-word;
+    }
+    .card-event-subtitle {
+      font-family: var(--font-classical-serif);
+      font-size: clamp(11px, 2.2vw, 13.5px);
+      letter-spacing: clamp(3px, 0.8vw, 6px);
+      text-transform: uppercase;
+      color: #631422;
+      font-weight: 600;
+      margin: 2px 0 8px 0;
+    }
+
+    .card-groom-prefix {
+      font-family: var(--font-classical-serif);
+      font-size: clamp(9px, 1.8vw, 10.5px);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #701c2b;
+      margin-top: 8px;
+    }
+    .card-groom-name {
+      font-family: var(--font-royal-serif);
+      font-size: clamp(26px, 6vw, 40px);
+      font-weight: 700;
+      color: #38050e;
+      letter-spacing: 0.8px;
+      margin: 4px 0 8px;
+    }
+
+    /* ==========================================================================
+       ROYAL PORTRAIT FRAME & REAL IMAGES / ILLUSTRATIONS SHOWCASE
+       ========================================================================== */
+    .royal-art-medallion {
+      margin: 14px auto 16px;
+      max-width: 360px;
+      position: relative;
+      border-radius: 8px;
+      padding: 10px 14px;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 253, 248, 0.95) 0%, rgba(248, 241, 228, 0.75) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      box-shadow: 
+        inset 0 0 20px rgba(212, 175, 55, 0.15),
+        0 8px 24px rgba(46, 6, 13, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .royal-art-medallion:hover {
+      transform: translateY(-2px);
+      box-shadow: 
+        inset 0 0 25px rgba(212, 175, 55, 0.25),
+        0 12px 28px rgba(46, 6, 13, 0.14);
+    }
+    .royal-art-medallion::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 1px dashed rgba(212, 175, 55, 0.35);
+      border-radius: 6px;
+      pointer-events: none;
+    }
+
+    .real-art-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 155px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 6px 14px rgba(46, 6, 13, 0.15));
+      transition: transform 0.4s ease;
+    }
+    .royal-art-medallion:hover .real-art-img {
+      transform: scale(1.03);
+    }
+
+    .card-poetic-quote {
+      font-family: var(--font-poetic-serif);
+      font-size: clamp(15px, 2.8vw, 18px);
+      font-style: italic;
+      color: #3b0910;
+      line-height: 1.65;
+      max-width: min(450px, 88%);
+      margin: 12px auto 18px;
+      padding: 0 12px;
+      box-sizing: border-box;
+      text-wrap: balance;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* 3-Column Event Specs Trio (Matches Reference Image) */
+    .event-details-trio {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.35fr;
+      gap: 12px;
+      border-top: 1.5px solid rgba(212, 175, 55, 0.4);
+      border-bottom: 1.5px solid rgba(212, 175, 55, 0.4);
+      padding: 18px 8px;
+      margin: 18px auto 22px;
+      max-width: 520px;
+      align-items: center;
+    }
+    .details-column {
+      position: relative;
+      padding: 4px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .details-column:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.7), transparent);
+    }
+    .details-icon-svg {
+      width: 28px;
+      height: 28px;
+      color: #aa771c;
+      margin-bottom: 6px;
+    }
+    .details-day-tag {
+      font-family: var(--font-classical-serif);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #631422;
+      font-weight: 600;
+    }
+    .details-main-text {
+      font-family: var(--font-royal-serif);
+      font-size: clamp(13px, 2.8vw, 15px);
+      font-weight: 700;
+      color: #2b0409;
+      margin: 2px 0;
+      line-height: 1.3;
+    }
+    .details-sub-text {
+      font-family: var(--font-poetic-serif);
+      font-size: 12.5px;
+      color: #551c24;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    /* Card Action Utility Buttons (Add to Cal, Maps, WhatsApp) */
+    .card-actions-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 18px;
+      background: #f4ecdc;
+      border: 1px solid var(--gold-deep);
+      border-radius: 3px;
+      color: #4a0d18;
+      font-family: var(--font-classical-serif);
+      font-size: 10.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: all 0.28s ease;
+    }
+    .card-btn:hover {
+      background: var(--maroon-accent);
+      color: #fff;
+      border-color: var(--maroon-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(120, 19, 36, 0.35);
+    }
+    .card-btn svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* Mini Navigator Below Card */
+    .explore-other-events {
+      margin-top: 32px;
+      text-align: center;
+    }
+    .explore-label {
+      font-family: var(--font-classical-serif);
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #deb887;
+      margin-bottom: 12px;
+    }
+    .other-events-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .mini-switch-btn {
+      background: transparent;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      color: var(--gold-bright);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-family: var(--font-classical-serif);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .mini-switch-btn:hover {
+      background: var(--maroon-accent);
+      border-color: var(--gold-shimmer);
+      color: #fff;
+    }
+
+    /* ==========================================================================
+       SECTION 4: COUNTDOWN & RSVP SECTION
+       ========================================================================== */
+    .celebration-extras {
+      max-width: 850px;
+      margin: 60px auto 20px;
+      text-align: center;
+    }
+
+    /* Royal Countdown Timer */
+    .countdown-box {
+      background: linear-gradient(145deg, rgba(46, 4, 11, 0.85), rgba(24, 2, 5, 0.96));
+      border: 1.5px solid rgba(212, 175, 55, 0.4);
+      border-radius: 6px;
+      padding: 30px 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+      margin-bottom: 45px;
+      position: relative;
+    }
+    .countdown-title {
+      font-family: var(--font-classical-serif);
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: var(--gold-bright);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: clamp(12px, 3vw, 30px);
+    }
+    .timer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 60px;
+    }
+    .timer-num {
+      font-family: var(--font-royal-serif);
+      font-size: clamp(28px, 6vw, 44px);
+      font-weight: 700;
+      color: #fff6e0;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(212,175,55,0.4);
+    }
+    .timer-label {
+      font-family: var(--font-classical-serif);
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #d8be8d;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* RSVP & Contact Section */
+    .rsvp-container {
+      background: linear-gradient(145deg, rgba(63, 7, 16, 0.75), rgba(35, 4, 9, 0.9));
+      border: 1.5px solid var(--gold-metallic);
+      border-radius: 6px;
+      padding: 35px 24px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.8);
+      position: relative;
+    }
+    .rsvp-container::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      pointer-events: none;
+      border-radius: 4px;
+    }
+    .rsvp-heading {
+      font-family: var(--font-royal-serif);
+      font-size: clamp(24px, 4.5vw, 34px);
+      color: #fff4dc;
+      margin-bottom: 8px;
+    }
+    .rsvp-sub {
+      font-size: 17px;
+      color: #eedcc0;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .contact-card {
+      background: rgba(20, 2, 4, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 4px;
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    .contact-card:hover {
+      border-color: var(--gold-shimmer);
+      transform: translateY(-3px);
+      background: rgba(44, 4, 10, 0.9);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    .contact-num {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff5df;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .contact-btn-group {
+      display: flex;
+      gap: 8px;
+    }
+    .contact-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-family: var(--font-classical-serif);
+      font-size: 9.5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+    .btn-call {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-metallic);
+      color: var(--gold-shimmer);
+    }
+    .btn-call:hover {
+      background: var(--gold-metallic);
+      color: #1a0205;
+    }
+    .btn-whatsapp {
+      background: rgba(37, 211, 102, 0.2);
+      border: 1px solid #25d366;
+      color: #8affaa;
+    }
+    .btn-whatsapp:hover {
+      background: #25d366;
+      color: #0b2e17;
+    }
+
+    /* Footer & Blessings */
+    .wedding-footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px 10px;
+      color: #dfcaa7;
+    }
+    .footer-dua {
+      font-family: var(--font-poetic-serif);
+      font-size: 21px;
+      font-style: italic;
+      color: #f7e6ca;
+      margin-bottom: 8px;
+    }
+    .footer-sign {
+      font-family: var(--font-classical-serif);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+    }
+
+    /* ==========================================================================
+       MEDIA QUERIES (Mobile & Tablet Responsiveness)
+       ========================================================================== */
+    @media (max-width: 680px) {
+      /* Mobile Scale for Corner Ornaments so they never collide with the header */
+      .floral-accent-top-left {
+        width: clamp(65px, 16vw, 85px) !important;
+        top: -4px !important;
+        left: -4px !important;
+        opacity: 0.85;
+        z-index: 5;
+      }
+      .hanging-lantern-wrap {
+        width: clamp(40px, 10vw, 52px) !important;
+        top: -6px !important;
+        right: 8px !important;
+        z-index: 5;
+      }
+      #main-content {
+        padding: clamp(65px, 14vw, 85px) 10px clamp(40px, 6vw, 70px) !important;
+      }
+      .invitation-suite-header {
+        margin-top: 4px;
+        margin-bottom: 18px;
+        padding: 0 12px;
+      }
+      .invitation-suite-header .royal-crest {
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      .invitation-suite-header .ceremony-label {
+        font-size: clamp(8.5px, 2.1vw, 10px);
+        letter-spacing: 1.8px;
+        max-width: 88%;
+        margin: 0 auto 4px;
+        line-height: 1.4;
+        white-space: normal;
+      }
+      .invitation-suite-header h1 {
+        font-size: clamp(22px, 6vw, 30px);
+        margin-bottom: 2px;
+      }
+      .invitation-suite-header p {
+        font-size: clamp(12px, 3vw, 14.5px);
+        max-width: 88%;
+        margin: 0 auto;
+        line-height: 1.4;
+      }
+      .event-menu-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 6px;
+        margin: 0 auto 20px;
+        width: 100%;
+        max-width: 520px;
+      }
+      .event-tab-btn {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 150px;
+        padding: 10px 4px;
+        border-radius: 6px;
+      }
+      .tab-icon {
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+      .tab-title {
+        font-size: clamp(14px, 3.6vw, 17px);
+        margin-bottom: 2px;
+      }
+      .tab-date {
+        font-size: 8.5px;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .card-bismillah {
+        top: clamp(18px, 3.5vw, 26px);
+        font-size: 19px;
+      }
+      .card-content-inner {
+        padding: clamp(96px, 15vw, 115px) clamp(24px, 7vw, 36px) 32px !important;
+        box-sizing: border-box;
+      }
+      .card-eyebrow {
+        font-size: clamp(7.5px, 2vw, 9px) !important;
+        letter-spacing: 1.1px !important;
+        max-width: 230px !important;
+        line-height: 1.45 !important;
+        margin: 0 auto 6px !important;
+        padding: 0 4px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        text-align: center !important;
+      }
+      .card-event-name {
+        font-size: clamp(48px, 12vw, 72px);
+      }
+      .card-event-subtitle {
+        font-size: clamp(10px, 2.4vw, 12.5px);
+        letter-spacing: 3px;
+      }
+      .royal-art-medallion {
+        max-width: min(290px, 88%);
+        padding: 8px 10px;
+        margin: 8px auto 12px;
+      }
+      .real-art-img {
+        max-height: clamp(105px, 23vw, 135px);
+      }
+      .card-poetic-quote {
+        font-size: clamp(12.5px, 2.7vw, 14.5px) !important;
+        line-height: 1.55 !important;
+        max-width: min(320px, 86%) !important;
+        margin: 8px auto 14px !important;
+        padding: 0 8px !important;
+        box-sizing: border-box !important;
+        text-wrap: balance !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+      }
+      .event-details-trio {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 14px 8px;
+        width: 100%;
+        max-width: 100%;
+      }
+      .details-column:not(:last-child)::after {
+        display: none;
+      }
+      .details-column {
+        border-bottom: 1px dashed rgba(212, 175, 55, 0.35);
+        padding-bottom: 10px;
+        width: 100%;
+      }
+      .details-column:last-child {
+        border-bottom: none;
+        padding-bottom: 2px;
+      }
+      .card-actions-bar {
+        gap: 6px;
+      }
+      .card-btn {
+        flex: 1 1 120px;
+        padding: 8px 10px;
+        font-size: 9px;
+      }
+      .countdown-box {
+        padding: 20px 10px;
+        margin-bottom: 30px;
+      }
+      .countdown-grid {
+        gap: clamp(6px, 2vw, 16px);
+      }
+      .timer-item {
+        min-width: clamp(45px, 12vw, 60px);
+      }
+      .timer-num {
+        font-size: clamp(22px, 5.5vw, 34px);
+      }
+      .timer-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+      .rsvp-container {
+        padding: 20px 12px;
+      }
+      .contact-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .floating-controls {
+        bottom: 12px;
+        right: 12px;
+      }
+      .control-pill-btn {
+        padding: 7px 12px;
+        font-size: 9.5px;
+      }
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+      }
+      .royal-background, .floating-controls, #welcome-screen, .event-menu-nav, .celebration-extras, .explore-other-events {
+        display: none !important;
+      }
+      #main-content {
+        padding: 0 !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .invitation-card {
+        display: block !important;
+        filter: none !important;
+        page-break-after: always;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Floating Rose Petals Canvas -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- ==========================================================================
+       ROYAL BACKGROUND & ATMOSPHERE (Deep Velvet, Real Lantern, Roses)
+       ========================================================================== */ -->
+  <div class="royal-background" aria-hidden="true">
+    <div class="velvet-drape-left"></div>
+    <div class="velvet-drape-right"></div>
+
+    <!-- Hanging Antique Brass Lantern (Real Transparent PNG + Glowing Candle) -->
+    <div class="hanging-lantern-wrap">
+      <div class="lantern-candle-glow"></div>
+      <img src="assets/hanging-lantern.png" alt="Royal Hanging Lantern" class="real-lantern-img" onerror="this.src='assets/hanging-lantern.jpg'">
+    </div>
+
+    <!-- Top Left Roses & Golden Leaves (Real Transparent Bouquet PNG) -->
+    <div class="floral-accent-top-left">
+      <img src="assets/corner-roses.png" alt="Burgundy Velvet Roses" class="real-roses-img" onerror="this.src='assets/corner-roses.jpg'">
+    </div>
+
+    <!-- Bottom Right Velvet Drape with Zardozi Gold Border -->
+    <div class="floral-accent-bottom-right">
+      <svg viewBox="0 0 250 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="zardoziGold" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#fff8db"/>
+            <stop offset="50%" stop-color="#d4af37"/>
+            <stop offset="100%" stop-color="#8a6112"/>
+          </linearGradient>
+        </defs>
+        <path d="M 50 160 C 90 90, 160 80, 250 70 L 250 160 Z" fill="#3f0710" opacity="0.95"/>
+        <path d="M 50 156 C 90 87, 160 77, 250 67" stroke="url(#zardoziGold)" stroke-width="4" fill="none"/>
+        <path d="M 55 150 C 95 82, 165 72, 250 62" stroke="url(#zardoziGold)" stroke-width="1.5" stroke-dasharray="4,2" fill="none"/>
+        <g fill="url(#zardoziGold)">
+          <circle cx="75" cy="130" r="2.5"/><circle cx="105" cy="108" r="2.5"/><circle cx="135" cy="94" r="2.5"/>
+          <circle cx="165" cy="84" r="2.5"/><circle cx="195" cy="77" r="2.5"/><circle cx="225" cy="71" r="2.5"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING INTERACTIVE CONTROLS (Falling Petals Toggle Only)
+       ========================================================================== */ -->
+  <div class="floating-controls">
+    <button class="control-pill-btn" id="btn-toggle-petals" aria-label="Toggle Falling Petals">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C9.5 5 7 8 7 11.5c0 3 2.2 5.5 5 5.5s5-2.5 5-5.5C17 8 14.5 5 12 2zm0 18c-2.5-1.5-6-3.8-6-7.5 0-.7.1-1.3.3-1.9 1.6 3 4.2 5.2 7.7 5.9-.6 1.8-1.4 3-2 3.5z"/>
+      </svg>
+      <span id="petals-text">Petals: On</span>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION 1: 3D ROYAL WEDDING ENVELOPE (UNBOXING EXPERIENCE)
+       Real Physical Lifafa / Box with 3D Monogrammed Wax Seal "MA"
+       ========================================================================== -->
+  <section id="welcome-screen" role="dialog" aria-modal="true" aria-label="Welcome to Royal Wedding Invitation">
+    <div class="royal-envelope-3d" onclick="openInvitationSuite()">
+      <!-- Envelope Ribbon Banner -->
+      <div class="envelope-gold-ribbon"></div>
+
+      <div class="bismillah-header">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <div class="bismillah-sub">In the name of Allah, the Most Beneficent, the Most Merciful</div>
+
+      <div class="gold-filigree-divider" style="margin-bottom: 12px;">
+        <span class="gold-flourish-diamond">❖</span>
+      </div>
+
+      <div class="ceremony-label" style="color: var(--gold-shimmer); font-family: var(--font-classical-serif); font-size: 11px; letter-spacing: 4px; text-transform: uppercase;">
+        Royal Wedding Invitation
+      </div>
+
+      <h2 class="royal-heading">
+        A Celebration of
+        <span>Sacred Love</span>
+      </h2>
+
+      <!-- REAL 3D STAMPED WAX SEAL WITH "MA" MONOGRAM -->
+      <div class="wax-seal-container" title="Click to break seal & open invitation">
+        <img src="assets/wax-seal-ma.png" alt="Royal MA Wax Seal" class="real-wax-seal-img" onerror="this.src='assets/wax-seal-ma.jpg'">
+      </div>
+
+      <div class="groom-welcome-badge">
+        <small>Honouring Our Beloved Groom</small>
+        <strong>M. Abubakar Asif</strong>
+      </div>
+
+      <div>
+        <button class="btn-open-envelope" onclick="event.stopPropagation(); openInvitationSuite();">
+          ✦ &nbsp; Open Royal Invitation &nbsp; ✦
+        </button>
+      </div>
+
+      <div class="events-summary-pills" style="margin-top: 18px; color: var(--gold-bright); font-family: var(--font-classical-serif); font-size: 10.5px; letter-spacing: 2.5px;">
+        ✦ &nbsp; Mehndi (26 Nov) &nbsp;·&nbsp; Barat (27 Nov) &nbsp;·&nbsp; Walima (28 Nov) &nbsp; ✦
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: MAIN INVITATION SUITE (Interactive Deck & Event Cards)
+       ========================================================================== -->
+  <main id="main-content">
+    
+    <!-- Top Royal Header -->
+    <header class="invitation-suite-header">
+      <div class="royal-crest">✧ ❦ ✧</div>
+      <div class="ceremony-label">Wedding Celebrations · November 2026</div>
+      <h1>Cordially Invited</h1>
+      <p>Please select an event below to inspect its dedicated physical invitation card</p>
+    </header>
+
+    <!-- Main Interactive Menu: 3 Ornate Event Buttons (STARTING WITH MEHNDI!) -->
+    <nav class="event-menu-nav" aria-label="Wedding Events Navigation">
+      <!-- 1. Mehndi Tab (ACTIVE BY DEFAULT AS REQUESTED) -->
+      <button class="event-tab-btn active" id="tab-mehndi" onclick="selectEvent('mehndi')" aria-controls="card-mehndi">
+        <span class="tab-icon">🌿</span>
+        <div class="tab-title">Mehndi</div>
+        <div class="tab-date">26 Nov 2026 · Thursday</div>
+        <div class="tab-indicator"></div>
+      </button>
+
+      <!-- 2. Barat Tab -->
+      <button class="event-tab-btn" id="tab-barat" onclick="selectEvent('barat')" aria-controls="card-barat">
+        <span class="tab-icon">🐎</span>
+        <div class="tab-title">Barat</div>
+        <div class="tab-date">27 Nov 2026 · Friday</div>
+        <div class="tab-indicator"></div>
+      </button>
+
+      <!-- 3. Walima Tab -->
+      <button class="event-tab-btn" id="tab-walima" onclick="selectEvent('walima')" aria-controls="card-walima">
+        <span class="tab-icon">👑</span>
+        <div class="tab-title">Walima</div>
+        <div class="tab-date">28 Nov 2026 · Saturday</div>
+        <div class="tab-indicator"></div>
+      </button>
+    </nav>
+
+    <!-- ========================================================================
+         EVENT CARDS DECK (PRISTINE CREAM & GOLDEN ARCH DESIGN)
+         ======================================================================== -->
+    <div class="card-deck-container" id="interactive-card-deck">
+
+      <!-- ====================================================================
+           CARD 1: MEHNDI INVITATION CARD (DEFAULT ACTIVE ON LOAD!)
+           Pristine Ivory/Cream Gradient + Real Henna & Dholak Art
+           ==================================================================== -->
+      <article class="invitation-card active-card" id="card-mehndi" aria-label="Mehndi Invitation Card">
+        <div class="card-foil-glare"></div>
+
+        <!-- SVG Mughal Arch Background with Pristine Royal Cream Gradient (Matches Reference Image) -->
+        <svg class="card-arch-frame-svg" viewBox="0 0 600 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldArchG1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fff8db"/>
+              <stop offset="30%" stop-color="#e8c766"/>
+              <stop offset="60%" stop-color="#d4af37"/>
+              <stop offset="85%" stop-color="#9a741c"/>
+              <stop offset="100%" stop-color="#fcedb3"/>
+            </linearGradient>
+            <!-- Clean Royal Ivory/Cream Parchment Radial Gradient -->
+            <radialGradient id="creamPaper1" cx="50%" cy="32%" r="68%">
+              <stop offset="0%" stop-color="#fefcf8"/>
+              <stop offset="55%" stop-color="#f8f1e3"/>
+              <stop offset="100%" stop-color="#ebdac0"/>
+            </radialGradient>
+          </defs>
+          <!-- Outer Cusped Mughal Arch Filled with Clean Cream Gradient -->
+          <path d="M 300 14 
+                   C 285 18, 260 22, 240 25 
+                   C 235 27, 239 29, 243 31 
+                   C 215 36, 180 41, 145 46 
+                   C 140 47, 144 49, 148 50 
+                   C 110 53, 65 55, 24 56 
+                   L 24 976 
+                   Q 24 990 40 990 
+                   L 560 990 
+                   Q 576 990 576 976 
+                   L 576 56 
+                   C 535 55, 490 53, 452 50 
+                   C 456 49, 460 47, 455 46 
+                   C 420 41, 385 36, 357 31 
+                   C 361 29, 365 27, 360 25 
+                   C 340 22, 315 18, 300 14 Z" 
+                fill="url(#creamPaper1)" stroke="url(#goldArchG1)" stroke-width="4.8"/>
+          <!-- Inner Hairline Arch Border with Embossed Gold -->
+          <path d="M 300 24 
+                   C 287 28, 264 31, 246 34 
+                   C 241 36, 245 38, 249 40 
+                   C 223 45, 191 50, 159 55 
+                   C 154 56, 158 58, 162 59 
+                   C 126 62, 80 64, 38 66 
+                   L 38 962 
+                   Q 38 976 52 976 
+                   L 548 976 
+                   Q 562 976 562 962 
+                   L 562 66 
+                   C 520 64, 474 62, 438 59 
+                   C 442 58, 446 56, 441 55 
+                   C 409 50, 377 45, 351 40 
+                   C 355 38, 359 36, 354 34 
+                   C 336 31, 313 28, 300 24 Z" 
+                fill="none" stroke="url(#goldArchG1)" stroke-width="1.8"/>
+        </svg>
+
+        <div class="card-content-inner">
+          <div class="card-eyebrow">You are cordially invited to celebrate the</div>
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <h2 class="card-event-name">Mehndi</h2>
+          <div class="card-event-subtitle">Night of Colours</div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <div class="card-groom-prefix">OF OUR BELOVED GROOM</div>
+          <div class="card-groom-name">M. Abubakar Asif</div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <!-- REAL HIGH-RES ARTWORK: TRADITIONAL WEDDING DHOLAK & MEHNDI THAAL -->
+          <div class="royal-art-medallion">
+            <img src="assets/mehndi-dholak.png" alt="Traditional Wedding Dholak and Mehndi Thaal" class="real-art-img" onerror="this.src='assets/mehndi-dholak.jpg'">
+          </div>
+
+          <p class="card-poetic-quote">
+            Join us for an enchanting evening filled with the rhythm of dholki, vibrant hues of henna, laughter and celebratory blessings as we commence the wedding festivities.
+          </p>
+
+          <!-- 3-COLUMN METADATA BAR (Date, Time, Venue) -->
+          <div class="event-details-trio">
+            <!-- Date Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <circle cx="8" cy="15" r="1.2" fill="currentColor"/><circle cx="12" cy="15" r="1.2" fill="currentColor"/>
+              </svg>
+              <span class="details-day-tag">THURSDAY</span>
+              <span class="details-main-text">26 Nov 2026</span>
+            </div>
+
+            <!-- Time Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span class="details-day-tag">TIME</span>
+              <span class="details-main-text">7:00 PM</span>
+              <span class="details-sub-text">Onwards</span>
+            </div>
+
+            <!-- Venue Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+              </svg>
+              <span class="details-main-text" style="font-size: 13.5px;">Karachi Marriage Hall</span>
+              <span class="details-sub-text">(Bilal Town, Street No. 8, Faisalabad)</span>
+            </div>
+          </div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <!-- Quick Action Buttons -->
+          <div class="card-actions-bar">
+            <button class="card-btn" onclick="addToGoogleCalendar('Mehndi - M. Abubakar Asif', '20261126T190000', '20261126T230000', 'Karachi Marriage Hall, Bilal Town, Street No. 8, Faisalabad', 'Mehndi celebrations of M. Abubakar Asif')">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+              Add to Calendar
+            </button>
+            <a class="card-btn" href="https://wa.me/923007864112?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Mehndi%20of%20M.%20Abubakar%20Asif.%20Kindly%20share%20the%20venue%20location%20coordinates%20for%20Karachi%20Marriage%20Hall." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Get Venue Location
+            </a>
+            <a class="card-btn" href="https://wa.me/923007864112?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Mehndi%20celebrations%20of%20M.%20Abubakar%20Asif.%20We%20delightfully%20confirm%20our%20attendance." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+              RSVP via WhatsApp
+            </a>
+          </div>
+
+          <!-- Bottom Switcher -->
+          <div class="explore-other-events">
+            <div class="explore-label">Explore Other Ceremonies</div>
+            <div class="other-events-group">
+              <button class="mini-switch-btn" onclick="selectEvent('barat')">🐎 Barat Invitation</button>
+              <button class="mini-switch-btn" onclick="selectEvent('walima')">👑 Walima Invitation</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           CARD 2: BARAT INVITATION CARD
+           Pristine Ivory/Cream Gradient + Real Royal Wedding Buggy
+           ==================================================================== -->
+      <article class="invitation-card" id="card-barat" aria-label="Barat Invitation Card">
+        <div class="card-foil-glare"></div>
+
+        <!-- SVG Mughal Arch Background with Clean Royal Cream Gradient -->
+        <svg class="card-arch-frame-svg" viewBox="0 0 600 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldArchG2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fff8db"/>
+              <stop offset="30%" stop-color="#e8c766"/>
+              <stop offset="60%" stop-color="#d4af37"/>
+              <stop offset="85%" stop-color="#9a741c"/>
+              <stop offset="100%" stop-color="#fcedb3"/>
+            </linearGradient>
+            <radialGradient id="creamPaper2" cx="50%" cy="32%" r="68%">
+              <stop offset="0%" stop-color="#fefcf8"/>
+              <stop offset="55%" stop-color="#f8f1e3"/>
+              <stop offset="100%" stop-color="#ebdac0"/>
+            </radialGradient>
+          </defs>
+          <path d="M 300 14 
+                   C 285 18, 260 22, 240 25 
+                   C 235 27, 239 29, 243 31 
+                   C 215 36, 180 41, 145 46 
+                   C 140 47, 144 49, 148 50 
+                   C 110 53, 65 55, 24 56 
+                   L 24 976 
+                   Q 24 990 40 990 
+                   L 560 990 
+                   Q 576 990 576 976 
+                   L 576 56 
+                   C 535 55, 490 53, 452 50 
+                   C 456 49, 460 47, 455 46 
+                   C 420 41, 385 36, 357 31 
+                   C 361 29, 365 27, 360 25 
+                   C 340 22, 315 18, 300 14 Z" 
+                fill="url(#creamPaper2)" stroke="url(#goldArchG2)" stroke-width="4.8"/>
+          <path d="M 300 24 
+                   C 287 28, 264 31, 246 34 
+                   C 241 36, 245 38, 249 40 
+                   C 223 45, 191 50, 159 55 
+                   C 154 56, 158 58, 162 59 
+                   C 126 62, 80 64, 38 66 
+                   L 38 962 
+                   Q 38 976 52 976 
+                   L 548 976 
+                   Q 562 976 562 962 
+                   L 562 66 
+                   C 520 64, 474 62, 438 59 
+                   C 442 58, 446 56, 441 55 
+                   C 409 50, 377 45, 351 40 
+                   C 355 38, 359 36, 354 34 
+                   C 336 31, 313 28, 300 24 Z" 
+                fill="none" stroke="url(#goldArchG2)" stroke-width="1.8"/>
+        </svg>
+
+        <div class="card-content-inner">
+          <div class="card-eyebrow">You are cordially invited to celebrate the</div>
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <h2 class="card-event-name">Barat</h2>
+          <div class="card-event-subtitle">The Wedding Day</div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <div class="card-groom-prefix">OF OUR BELOVED GROOM</div>
+          <div class="card-groom-name">M. Abubakar Asif</div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <!-- REAL HIGH-RES ARTWORK: ROYAL WEDDING BUGGY (CARRIAGE) -->
+          <div class="royal-art-medallion">
+            <img src="assets/barat-buggy.png" alt="Royal Wedding Carriage Buggy" class="real-art-img" onerror="this.src='assets/barat-buggy.jpg'">
+          </div>
+
+          <p class="card-poetic-quote">
+            With hearts full of joy and reverence to Almighty Allah, we invite you to share in our happiness as our beloved groom embarks upon this sacred lifelong journey.
+          </p>
+
+          <!-- 3-COLUMN METADATA BAR (Date, Time, Venue) -->
+          <div class="event-details-trio">
+            <!-- Date Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <circle cx="8" cy="15" r="1.2" fill="currentColor"/><circle cx="12" cy="15" r="1.2" fill="currentColor"/>
+              </svg>
+              <span class="details-day-tag">FRIDAY</span>
+              <span class="details-main-text">27 Nov 2026</span>
+            </div>
+
+            <!-- Time Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span class="details-day-tag">CEREMONY TIMES</span>
+              <span class="details-main-text" style="font-size: 12.5px;">Sehra Bandi: 12:00 PM</span>
+              <span class="details-sub-text">Barat Departure: 1:00 PM</span>
+            </div>
+
+            <!-- Venue Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+              </svg>
+              <span class="details-main-text" style="font-size: 13.5px;">From Home</span>
+              <span class="details-sub-text">(Groom’s Residence / Rawanagi)</span>
+            </div>
+          </div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <!-- Quick Action Buttons -->
+          <div class="card-actions-bar">
+            <button class="card-btn" onclick="addToGoogleCalendar('Barat (Sehra Bandi & Rawanagi) - M. Abubakar Asif', '20261127T120000', '20261127T160000', 'Groom Residence, Faisalabad', 'Barat Departure & Sehra Bandi for M. Abubakar Asif')">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+              Add to Calendar
+            </button>
+            <a class="card-btn" href="https://wa.me/923007626218?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Barat%20of%20M.%20Abubakar%20Asif.%20Kindly%20share%20the%20home%20location%20coordinates." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Get Home Directions
+            </a>
+            <a class="card-btn" href="https://wa.me/923007626218?text=Assalam-o-Alaikum!%20Heartfelt%20prayers%20and%20congratulations%20on%20the%20Barat%20of%20M.%20Abubakar%20Asif.%20Looking%20forward%20to%20joining%20you%20for%20Sehra%20Bandi." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+              RSVP via WhatsApp
+            </a>
+          </div>
+
+          <!-- Bottom Switcher -->
+          <div class="explore-other-events">
+            <div class="explore-label">Explore Other Ceremonies</div>
+            <div class="other-events-group">
+              <button class="mini-switch-btn" onclick="selectEvent('mehndi')">🌿 Mehndi Invitation</button>
+              <button class="mini-switch-btn" onclick="selectEvent('walima')">👑 Walima Invitation</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           CARD 3: WALIMA INVITATION CARD
+           Pristine Ivory/Cream Gradient + Real Royal Pakistani Couple
+           ==================================================================== -->
+      <article class="invitation-card" id="card-walima" aria-label="Walima Invitation Card">
+        <div class="card-foil-glare"></div>
+
+        <!-- SVG Mughal Arch Background with Clean Royal Cream Gradient -->
+        <svg class="card-arch-frame-svg" viewBox="0 0 600 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldArchG3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fff8db"/>
+              <stop offset="30%" stop-color="#e8c766"/>
+              <stop offset="60%" stop-color="#d4af37"/>
+              <stop offset="85%" stop-color="#9a741c"/>
+              <stop offset="100%" stop-color="#fcedb3"/>
+            </linearGradient>
+            <radialGradient id="creamPaper3" cx="50%" cy="32%" r="68%">
+              <stop offset="0%" stop-color="#fefcf8"/>
+              <stop offset="55%" stop-color="#f8f1e3"/>
+              <stop offset="100%" stop-color="#ebdac0"/>
+            </radialGradient>
+          </defs>
+          <path d="M 300 16 
+                   C 285 23, 260 28, 240 32 
+                   C 235 34, 239 37, 243 39 
+                   C 215 48, 180 57, 145 64 
+                   C 140 66, 144 69, 148 70 
+                   C 110 76, 65 79, 24 82 
+                   L 24 934 
+                   Q 24 950 40 950 
+                   L 560 950 
+                   Q 576 950 576 934 
+                   L 576 82 
+                   C 535 79, 490 76, 452 70 
+                   C 456 69, 460 66, 455 64 
+                   C 420 57, 385 48, 357 39 
+                   C 361 37, 365 34, 360 32 
+                   C 340 28, 315 23, 300 16 Z" 
+                fill="url(#creamPaper3)" stroke="url(#goldArchG3)" stroke-width="4.8"/>
+          <path d="M 300 28 
+                   C 287 34, 264 39, 246 43 
+                   C 241 45, 245 48, 249 50 
+                   C 223 58, 191 66, 159 73 
+                   C 154 75, 158 78, 162 79 
+                   C 126 85, 80 88, 38 91 
+                   L 38 920 
+                   Q 38 934 52 934 
+                   L 548 934 
+                   Q 562 934 562 920 
+                   L 562 91 
+                   C 520 88, 474 85, 438 79 
+                   C 442 78, 446 75, 441 73 
+                   C 409 66, 377 58, 351 50 
+                   C 355 48, 359 45, 354 43 
+                   C 336 39, 313 34, 300 28 Z" 
+                fill="none" stroke="url(#goldArchG3)" stroke-width="1.8"/>
+        </svg>
+
+        <div class="card-content-inner">
+          <div class="card-eyebrow">You are cordially invited to the</div>
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <h2 class="card-event-name">Walima</h2>
+          <div class="card-event-subtitle">CEREMONY</div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <div class="card-groom-prefix">OF OUR BELOVED GROOM</div>
+          <div class="card-groom-name">M. Abubakar Asif</div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <!-- REAL HIGH-RES ARTWORK: ROYAL WALIMA COUPLE (GROOM IN BLACK SUIT, BRIDE IN WHITE DRESS) -->
+          <div class="royal-art-medallion">
+            <img src="assets/walima-couple.png" alt="Royal Groom in Black Tuxedo and Bride in White Gown" class="real-art-img" onerror="this.src='assets/walima-couple.jpg'">
+          </div>
+
+          <p class="card-poetic-quote">
+            We request the pleasure of your company as we celebrate this special moment with food, prayers and your heartfelt presence.
+          </p>
+
+          <!-- 3-COLUMN METADATA BAR (Date, Time, Venue - Matching Reference Card) -->
+          <div class="event-details-trio">
+            <!-- Date Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <circle cx="8" cy="15" r="1.2" fill="currentColor"/><circle cx="12" cy="15" r="1.2" fill="currentColor"/><circle cx="16" cy="15" r="1.2" fill="currentColor"/>
+              </svg>
+              <span class="details-day-tag">SATURDAY</span>
+              <span class="details-main-text">28th Nov 2026</span>
+            </div>
+
+            <!-- Time Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span class="details-day-tag">TIME</span>
+              <span class="details-main-text">12PM to 4PM</span>
+            </div>
+
+            <!-- Venue Column -->
+            <div class="details-column">
+              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
+              </svg>
+              <span class="details-main-text" style="font-size: 13.5px;">Al Hayat Marriage Hall</span>
+              <span class="details-sub-text">(Main Halal Road Near Nusrat Fateh Ali Khan General Hospital)</span>
+            </div>
+          </div>
+
+          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
+
+          <!-- Quick Action Buttons -->
+          <div class="card-actions-bar">
+            <button class="card-btn" onclick="addToGoogleCalendar('Walima Reception - M. Abubakar Asif', '20261128T120000', '20261128T160000', 'Al Hayat Marriage Hall, Main Halal Road Near Nusrat Fateh Ali Khan General Hospital, Faisalabad', 'Walima Reception ceremony of M. Abubakar Asif')">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+              Add to Calendar
+            </button>
+            <a class="card-btn" href="https://wa.me/923098857729?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Walima%20Ceremony%20of%20M.%20Abubakar%20Asif.%20Kindly%20share%20the%20venue%20location%20coordinates%20for%20Al%20Hayat%20Marriage%20Hall." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Get Venue Location
+            </a>
+            <a class="card-btn" href="https://wa.me/923098857729?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Walima%20Ceremony%20of%20M.%20Abubakar%20Asif.%20We%20are%20honoured%20to%20attend." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+              RSVP via WhatsApp
+            </a>
+          </div>
+
+          <!-- Bottom Switcher -->
+          <div class="explore-other-events">
+            <div class="explore-label">Explore Other Ceremonies</div>
+            <div class="other-events-group">
+              <button class="mini-switch-btn" onclick="selectEvent('mehndi')">🌿 Mehndi Invitation</button>
+              <button class="mini-switch-btn" onclick="selectEvent('barat')">🐎 Barat Invitation</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ========================================================================
+         SECTION 4: CELEBRATION COUNTDOWN & RSVP CONTACTS
+         ======================================================================== -->
+    <section class="celebration-extras" aria-label="Wedding Countdown & RSVP Details">
+
+      <!-- Live Countdown Timer -->
+      <div class="countdown-box">
+        <div class="countdown-title">✦ &nbsp; Wedding Festivities Commence In &nbsp; ✦</div>
+        <div class="countdown-grid">
+          <div class="timer-item">
+            <span class="timer-num" id="cd-days">00</span>
+            <span class="timer-label">Days</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-num" id="cd-hours">00</span>
+            <span class="timer-label">Hours</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-num" id="cd-mins">00</span>
+            <span class="timer-label">Minutes</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-num" id="cd-secs">00</span>
+            <span class="timer-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RSVP Contacts Box -->
+      <div class="rsvp-container">
+        <div class="ceremony-label" style="color: var(--gold-bright); font-family: var(--font-classical-serif); font-size: 11px; letter-spacing: 3px; text-transform: uppercase;">
+          For Inquiries & Gracious Confirmation
+        </div>
+        <h3 class="rsvp-heading">R.S.V.P & Contact</h3>
+        <p class="rsvp-sub">Your prayers and gracious presence are the greatest gifts to our family</p>
+
+        <div class="contact-cards-grid">
+          <!-- Contact 1 -->
+          <div class="contact-card">
+            <div class="contact-num">+92 300 7864112</div>
+            <div class="contact-btn-group">
+              <a href="tel:+923007864112" class="contact-action-btn btn-call">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+                Call
+              </a>
+              <a href="https://wa.me/923007864112?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20wedding%20of%20M.%20Abubakar%20Asif." target="_blank" rel="noopener" class="contact-action-btn btn-whatsapp">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact 2 -->
+          <div class="contact-card">
+            <div class="contact-num">+92 300 7626218</div>
+            <div class="contact-btn-group">
+              <a href="tel:+923007626218" class="contact-action-btn btn-call">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+                Call
+              </a>
+              <a href="https://wa.me/923007626218?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20wedding%20of%20M.%20Abubakar%20Asif." target="_blank" rel="noopener" class="contact-action-btn btn-whatsapp">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact 3 -->
+          <div class="contact-card">
+            <div class="contact-num">+92 309 8857729</div>
+            <div class="contact-btn-group">
+              <a href="tel:+923098857729" class="contact-action-btn btn-call">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+                Call
+              </a>
+              <a href="https://wa.me/923098857729?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20wedding%20of%20M.%20Abubakar%20Asif." target="_blank" rel="noopener" class="contact-action-btn btn-whatsapp">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wedding Footer & Blessings -->
+      <footer class="wedding-footer">
+        <p class="footer-dua">"May Allah bless this union and shower His mercy upon them."</p>
+        <div class="footer-sign">With Love & Duas · Muhammad Abubakar & Family</div>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       CLIENT-SIDE JAVASCRIPT: LOGIC, 3D TILT, MEHNDI DEFAULT, NO MUSIC / SILENT
+       ========================================================================== -->
+  <script>
+    // --- 1. OPENING ANIMATION: TRANSITION FROM 3D ENVELOPE TO MEHNDI INVITATION ---
+    function openInvitationSuite() {
+      const welcome = document.getElementById('welcome-screen');
+      const main = document.getElementById('main-content');
+
+      welcome.classList.add('unveiled');
+      main.classList.add('visible');
+
+      // ENSURE MEHNDI IS ACTIVATED AND DISPLAYED FIRST BY DEFAULT
+      selectEvent('mehndi');
+
+      // Scroll smoothly to top of invitation suite
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 350);
+    }
+
+    // --- 2. INTERACTIVE EVENT SWITCHER: MEHNDI -> BARAT -> WALIMA ---
+    function selectEvent(eventId) {
+      // Update Tab Buttons
+      const tabIds = ['tab-mehndi', 'tab-barat', 'tab-walima'];
+      tabIds.forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.classList.remove('active');
+      });
+      const activeTab = document.getElementById(`tab-${eventId}`);
+      if (activeTab) activeTab.classList.add('active');
+
+      // Update Card Visibility with 3D Slide / Elevation Animation
+      const cardIds = ['card-mehndi', 'card-barat', 'card-walima'];
+      cardIds.forEach(id => {
+        const card = document.getElementById(id);
+        if (card) {
+          card.classList.remove('active-card');
+          card.style.display = 'none';
+        }
+      });
+
+      const selectedCard = document.getElementById(`card-${eventId}`);
+      if (selectedCard) {
+        selectedCard.style.display = 'block';
+        // Force reflow for smooth re-trigger of physical card animation
+        void selectedCard.offsetWidth;
+        selectedCard.classList.add('active-card');
+
+        // Smooth scroll to card
+        setTimeout(() => {
+          selectedCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 80);
+      }
+    }
+
+    // --- 3. 3D CARD TILT & HOLOGRAPHIC GOLD FOIL GLARE (PHYSICAL REALISM) ---
+    const deckContainer = document.getElementById('interactive-card-deck');
+
+    function handleTiltMove(e) {
+      const activeCard = document.querySelector('.invitation-card.active-card');
+      if (!activeCard) return;
+
+      const rect = activeCard.getBoundingClientRect();
+      const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+      const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+
+      if (!clientX || !clientY) return;
+
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Calculate tilt angles (subtle & realistic max 7.5 degrees)
+      const rotateX = ((centerY - y) / centerY) * 7.5;
+      const rotateY = ((x - centerX) / centerX) * 7.5;
+
+      activeCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+
+      // Dynamic Foil Glare Position
+      const glare = activeCard.querySelector('.card-foil-glare');
+      if (glare) {
+        const glareX = (x / rect.width) * 100;
+        const glareY = (y / rect.height) * 100;
+        glare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 245, 215, 0.45) 0%, rgba(212, 175, 55, 0.15) 35%, transparent 65%)`;
+      }
+    }
+
+    function handleTiltReset() {
+      const activeCard = document.querySelector('.invitation-card.active-card');
+      if (activeCard) {
+        activeCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        activeCard.style.transition = 'transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        setTimeout(() => {
+          activeCard.style.transition = '';
+        }, 600);
+      }
+    }
+
+    if (deckContainer) {
+      deckContainer.addEventListener('mousemove', handleTiltMove);
+      deckContainer.addEventListener('mouseleave', handleTiltReset);
+      deckContainer.addEventListener('touchmove', handleTiltMove, { passive: true });
+      deckContainer.addEventListener('touchend', handleTiltReset);
+    }
+
+    // --- 5. GOOGLE CALENDAR LINK GENERATOR ---
+    function addToGoogleCalendar(title, startIso, endIso, location, details) {
+      const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startIso}/${endIso}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(details)}`;
+      window.open(url, '_blank');
+    }
+
+    // --- 6. LIVE WEDDING COUNTDOWN TIMER (To November 26, 2026 19:00:00) ---
+    function initCountdown() {
+      const weddingDate = new Date('2026-11-26T19:00:00').getTime();
+
+      function update() {
+        const now = new Date().getTime();
+        const diff = weddingDate - now;
+
+        if (diff <= 0) {
+          document.getElementById('cd-days').textContent = '00';
+          document.getElementById('cd-hours').textContent = '00';
+          document.getElementById('cd-mins').textContent = '00';
+          document.getElementById('cd-secs').textContent = '00';
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+        document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+        document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+      }
+
+      update();
+      setInterval(update, 1000);
+    }
+    initCountdown();
+
+    // --- 7. FALLING ROSE PETALS PARTICLE SIMULATION ---
+    const canvas = document.getElementById('petals-canvas');
+    const ctx = canvas.getContext('2d');
+    let petalsActive = true;
+    let animationFrameId = null;
+
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const petalCount = 38;
+    const petals = [];
+
+    const petalColors = [
+      { r: 180, g: 24, b: 42, a: 0.8 },
+      { r: 130, g: 12, b: 24, a: 0.85 },
+      { r: 212, g: 175, b: 55, a: 0.75 },
+      { r: 235, g: 205, b: 125, a: 0.7 },
+      { r: 245, g: 235, b: 220, a: 0.6 }
+    ];
+
+    class RosePetal {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * -height * 0.5;
+        this.size = Math.random() * 9 + 8;
+        this.speedY = Math.random() * 1.2 + 0.8;
+        this.speedX = Math.random() * 0.8 - 0.4;
+        this.angle = Math.random() * Math.PI * 2;
+        this.angularSpeed = (Math.random() - 0.5) * 0.03;
+        this.flip = Math.random() * Math.PI;
+        this.flipSpeed = Math.random() * 0.03 + 0.01;
+        this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += Math.sin(this.angle) * 0.9 + this.speedX;
+        this.angle += this.angularSpeed;
+        this.flip += this.flipSpeed;
+
+        if (this.y > height + 20) {
+          this.reset();
+          this.y = -20;
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle);
+        ctx.scale(1, Math.cos(this.flip));
+
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.bezierCurveTo(this.size * 0.6, -this.size * 0.8, this.size * 1.1, -this.size * 0.2, 0, this.size);
+        ctx.bezierCurveTo(-this.size * 1.1, -this.size * 0.2, -this.size * 0.6, -this.size * 0.8, 0, 0);
+
+        ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.color.a})`;
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.25)';
+        ctx.shadowBlur = 4;
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < petalCount; i++) {
+      petals.push(new RosePetal());
+    }
+
+    function renderPetals() {
+      if (!petalsActive) return;
+      ctx.clearRect(0, 0, width, height);
+      petals.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      animationFrameId = requestAnimationFrame(renderPetals);
+    }
+    renderPetals();
+
+    // Petals Toggle Button
+    const petalsBtn = document.getElementById('btn-toggle-petals');
+    const petalsText = document.getElementById('petals-text');
+    petalsBtn.addEventListener('click', () => {
+      petalsActive = !petalsActive;
+      if (petalsActive) {
+        petalsText.textContent = 'Petals: On';
+        renderPetals();
+      } else {
+        petalsText.textContent = 'Petals: Off';
+        ctx.clearRect(0, 0, width, height);
+        cancelAnimationFrame(animationFrameId);
+      }
+    });
+
+    // DEFAULT INITIALIZATION: ENSURE MEHNDI IS ACTIVATED BY DEFAULT
+    window.addEventListener('DOMContentLoaded', () => {
+      selectEvent('mehndi');
+    });
+  </script>
+</body>
+</html>
