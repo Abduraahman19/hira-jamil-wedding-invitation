@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#2b040a">
-  <meta name="description" content="Royal Wedding Invitation for the celebrations of M. Abubakar Asif | Mehndi, Barat & Walima - November 2026">
-  <title>Wedding Invitation | M. Abubakar Asif</title>
+  <meta name="description" content="Royal Wedding Invitation for the celebrations of Hira Jamil | Barat & Walima - November 2026">
+  <title>Wedding Invitation | Hira Jamil</title>
 
   <!-- Google Fonts: Royal Calligraphy, Serifs, and Modern Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -496,16 +496,16 @@
     }
 
     /* ==========================================================================
-       EVENT NAVIGATION: 3 PHYSICAL INVITATION INSERTS (MEHNDI FIRST!)
+       EVENT NAVIGATION: 2 PHYSICAL INVITATION INSERTS (BARAT & WALIMA)
        ========================================================================== */
     .event-menu-nav {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: clamp(10px, 2.5vw, 22px);
+      gap: clamp(12px, 2.8vw, 24px);
       flex-wrap: wrap;
       margin: 0 auto clamp(30px, 5vw, 50px);
-      max-width: 850px;
+      max-width: 580px;
     }
     .event-tab-btn {
       flex: 1 1 200px;
@@ -1029,9 +1029,10 @@
     }
     .contact-cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
-      margin-top: 20px;
+      margin: 20px auto 0;
+      max-width: 580px;
     }
     .contact-card {
       background: rgba(20, 2, 4, 0.7);
@@ -1048,6 +1049,14 @@
       transform: translateY(-3px);
       background: rgba(44, 4, 10, 0.9);
       box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    .contact-name {
+      font-family: var(--font-royal-serif);
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--gold-shimmer);
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
     }
     .contact-num {
       font-family: var(--font-sans);
@@ -1168,16 +1177,16 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 6px;
+        gap: 8px;
         margin: 0 auto 20px;
         width: 100%;
-        max-width: 520px;
+        max-width: 440px;
       }
       .event-tab-btn {
         flex: 1 1 0;
         min-width: 0;
-        max-width: 150px;
-        padding: 10px 4px;
+        max-width: 200px;
+        padding: 12px 6px;
         border-radius: 6px;
       }
       .tab-icon {
@@ -1407,12 +1416,12 @@
 
       <!-- REAL 3D STAMPED WAX SEAL WITH "MA" MONOGRAM -->
       <div class="wax-seal-container" title="Click to break seal & open invitation">
-        <img src="assets/wax-seal-ma.png" alt="Royal MA Wax Seal" class="real-wax-seal-img" onerror="this.src='assets/wax-seal-ma.jpg'">
+        <img src="assets/wax-seal-ma.png" alt="Royal Wedding Wax Seal" class="real-wax-seal-img" onerror="this.src='assets/wax-seal-ma.jpg'">
       </div>
 
       <div class="groom-welcome-badge">
-        <small>Honouring Our Beloved Groom</small>
-        <strong>M. Abubakar Asif</strong>
+        <small>Honouring Our Beloved Bride</small>
+        <strong>Hira Jamil</strong>
       </div>
 
       <div>
@@ -1422,7 +1431,7 @@
       </div>
 
       <div class="events-summary-pills" style="margin-top: 18px; color: var(--gold-bright); font-family: var(--font-classical-serif); font-size: 10.5px; letter-spacing: 2.5px;">
-        ✦ &nbsp; Mehndi (26 Nov) &nbsp;·&nbsp; Barat (27 Nov) &nbsp;·&nbsp; Walima (28 Nov) &nbsp; ✦
+        ✦ &nbsp; Barat (27 Nov) &nbsp;·&nbsp; Walima (28 Nov) &nbsp; ✦
       </div>
     </div>
   </section>
@@ -1440,25 +1449,17 @@
       <p>Please select an event below to inspect its dedicated physical invitation card</p>
     </header>
 
-    <!-- Main Interactive Menu: 3 Ornate Event Buttons (STARTING WITH MEHNDI!) -->
+    <!-- Main Interactive Menu: 2 Ornate Event Buttons (Barat & Walima) -->
     <nav class="event-menu-nav" aria-label="Wedding Events Navigation">
-      <!-- 1. Mehndi Tab (ACTIVE BY DEFAULT AS REQUESTED) -->
-      <button class="event-tab-btn active" id="tab-mehndi" onclick="selectEvent('mehndi')" aria-controls="card-mehndi">
-        <span class="tab-icon">🌿</span>
-        <div class="tab-title">Mehndi</div>
-        <div class="tab-date">26 Nov 2026 · Thursday</div>
-        <div class="tab-indicator"></div>
-      </button>
-
-      <!-- 2. Barat Tab -->
-      <button class="event-tab-btn" id="tab-barat" onclick="selectEvent('barat')" aria-controls="card-barat">
+      <!-- 1. Barat Tab (ACTIVE BY DEFAULT) -->
+      <button class="event-tab-btn active" id="tab-barat" onclick="selectEvent('barat')" aria-controls="card-barat">
         <span class="tab-icon">🐎</span>
         <div class="tab-title">Barat</div>
         <div class="tab-date">27 Nov 2026 · Friday</div>
         <div class="tab-indicator"></div>
       </button>
 
-      <!-- 3. Walima Tab -->
+      <!-- 2. Walima Tab -->
       <button class="event-tab-btn" id="tab-walima" onclick="selectEvent('walima')" aria-controls="card-walima">
         <span class="tab-icon">👑</span>
         <div class="tab-title">Walima</div>
@@ -1473,160 +1474,10 @@
     <div class="card-deck-container" id="interactive-card-deck">
 
       <!-- ====================================================================
-           CARD 1: MEHNDI INVITATION CARD (DEFAULT ACTIVE ON LOAD!)
-           Pristine Ivory/Cream Gradient + Real Henna & Dholak Art
-           ==================================================================== -->
-      <article class="invitation-card active-card" id="card-mehndi" aria-label="Mehndi Invitation Card">
-        <div class="card-foil-glare"></div>
-
-        <!-- SVG Mughal Arch Background with Pristine Royal Cream Gradient (Matches Reference Image) -->
-        <svg class="card-arch-frame-svg" viewBox="0 0 600 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="goldArchG1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fff8db"/>
-              <stop offset="30%" stop-color="#e8c766"/>
-              <stop offset="60%" stop-color="#d4af37"/>
-              <stop offset="85%" stop-color="#9a741c"/>
-              <stop offset="100%" stop-color="#fcedb3"/>
-            </linearGradient>
-            <!-- Clean Royal Ivory/Cream Parchment Radial Gradient -->
-            <radialGradient id="creamPaper1" cx="50%" cy="32%" r="68%">
-              <stop offset="0%" stop-color="#fefcf8"/>
-              <stop offset="55%" stop-color="#f8f1e3"/>
-              <stop offset="100%" stop-color="#ebdac0"/>
-            </radialGradient>
-          </defs>
-          <!-- Outer Cusped Mughal Arch Filled with Clean Cream Gradient -->
-          <path d="M 300 14 
-                   C 285 18, 260 22, 240 25 
-                   C 235 27, 239 29, 243 31 
-                   C 215 36, 180 41, 145 46 
-                   C 140 47, 144 49, 148 50 
-                   C 110 53, 65 55, 24 56 
-                   L 24 976 
-                   Q 24 990 40 990 
-                   L 560 990 
-                   Q 576 990 576 976 
-                   L 576 56 
-                   C 535 55, 490 53, 452 50 
-                   C 456 49, 460 47, 455 46 
-                   C 420 41, 385 36, 357 31 
-                   C 361 29, 365 27, 360 25 
-                   C 340 22, 315 18, 300 14 Z" 
-                fill="url(#creamPaper1)" stroke="url(#goldArchG1)" stroke-width="4.8"/>
-          <!-- Inner Hairline Arch Border with Embossed Gold -->
-          <path d="M 300 24 
-                   C 287 28, 264 31, 246 34 
-                   C 241 36, 245 38, 249 40 
-                   C 223 45, 191 50, 159 55 
-                   C 154 56, 158 58, 162 59 
-                   C 126 62, 80 64, 38 66 
-                   L 38 962 
-                   Q 38 976 52 976 
-                   L 548 976 
-                   Q 562 976 562 962 
-                   L 562 66 
-                   C 520 64, 474 62, 438 59 
-                   C 442 58, 446 56, 441 55 
-                   C 409 50, 377 45, 351 40 
-                   C 355 38, 359 36, 354 34 
-                   C 336 31, 313 28, 300 24 Z" 
-                fill="none" stroke="url(#goldArchG1)" stroke-width="1.8"/>
-        </svg>
-
-        <div class="card-content-inner">
-          <div class="card-eyebrow">You are cordially invited to celebrate the</div>
-          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
-
-          <h2 class="card-event-name">Mehndi</h2>
-          <div class="card-event-subtitle">Night of Colours</div>
-
-          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
-
-          <div class="card-groom-prefix">OF OUR BELOVED GROOM</div>
-          <div class="card-groom-name">M. Abubakar Asif</div>
-
-          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
-
-          <!-- REAL HIGH-RES ARTWORK: TRADITIONAL WEDDING DHOLAK & MEHNDI THAAL -->
-          <div class="royal-art-medallion">
-            <img src="assets/mehndi-dholak.png" alt="Traditional Wedding Dholak and Mehndi Thaal" class="real-art-img" onerror="this.src='assets/mehndi-dholak.jpg'">
-          </div>
-
-          <p class="card-poetic-quote">
-            Join us for an enchanting evening filled with the rhythm of dholki, vibrant hues of henna, laughter and celebratory blessings as we commence the wedding festivities.
-          </p>
-
-          <!-- 3-COLUMN METADATA BAR (Date, Time, Venue) -->
-          <div class="event-details-trio">
-            <!-- Date Column -->
-            <div class="details-column">
-              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-                <circle cx="8" cy="15" r="1.2" fill="currentColor"/><circle cx="12" cy="15" r="1.2" fill="currentColor"/>
-              </svg>
-              <span class="details-day-tag">THURSDAY</span>
-              <span class="details-main-text">26 Nov 2026</span>
-            </div>
-
-            <!-- Time Column -->
-            <div class="details-column">
-              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="12" cy="12" r="9"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              <span class="details-day-tag">TIME</span>
-              <span class="details-main-text">7:00 PM</span>
-              <span class="details-sub-text">Onwards</span>
-            </div>
-
-            <!-- Venue Column -->
-            <div class="details-column">
-              <svg class="details-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
-              </svg>
-              <span class="details-main-text" style="font-size: 13.5px;">Karachi Marriage Hall</span>
-              <span class="details-sub-text">(Bilal Town, Street No. 8, Faisalabad)</span>
-            </div>
-          </div>
-
-          <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
-
-          <!-- Quick Action Buttons -->
-          <div class="card-actions-bar">
-            <button class="card-btn" onclick="addToGoogleCalendar('Mehndi - M. Abubakar Asif', '20261126T190000', '20261126T230000', 'Karachi Marriage Hall, Bilal Town, Street No. 8, Faisalabad', 'Mehndi celebrations of M. Abubakar Asif')">
-              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
-              Add to Calendar
-            </button>
-            <a class="card-btn" href="https://wa.me/923007864112?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Mehndi%20of%20M.%20Abubakar%20Asif.%20Kindly%20share%20the%20venue%20location%20coordinates%20for%20Karachi%20Marriage%20Hall." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              Get Venue Location
-            </a>
-            <a class="card-btn" href="https://wa.me/923007864112?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Mehndi%20celebrations%20of%20M.%20Abubakar%20Asif.%20We%20delightfully%20confirm%20our%20attendance." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-              RSVP via WhatsApp
-            </a>
-          </div>
-
-          <!-- Bottom Switcher -->
-          <div class="explore-other-events">
-            <div class="explore-label">Explore Other Ceremonies</div>
-            <div class="other-events-group">
-              <button class="mini-switch-btn" onclick="selectEvent('barat')">🐎 Barat Invitation</button>
-              <button class="mini-switch-btn" onclick="selectEvent('walima')">👑 Walima Invitation</button>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- ====================================================================
-           CARD 2: BARAT INVITATION CARD
+           CARD 1: BARAT INVITATION CARD (DEFAULT ACTIVE ON LOAD!)
            Pristine Ivory/Cream Gradient + Real Royal Wedding Buggy
            ==================================================================== -->
-      <article class="invitation-card" id="card-barat" aria-label="Barat Invitation Card">
+      <article class="invitation-card active-card" id="card-barat" aria-label="Barat Invitation Card">
         <div class="card-foil-glare"></div>
 
         <!-- SVG Mughal Arch Background with Clean Royal Cream Gradient -->
@@ -1690,8 +1541,8 @@
 
           <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
 
-          <div class="card-groom-prefix">OF OUR BELOVED GROOM</div>
-          <div class="card-groom-name">M. Abubakar Asif</div>
+          <div class="card-groom-prefix">OF OUR BELOVED BRIDE</div>
+          <div class="card-groom-name">Hira Jamil</div>
 
           <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
 
@@ -1701,7 +1552,7 @@
           </div>
 
           <p class="card-poetic-quote">
-            With hearts full of joy and reverence to Almighty Allah, we invite you to share in our happiness as our beloved groom embarks upon this sacred lifelong journey.
+            With hearts full of joy and gratitude to Almighty Allah, we cordially invite you to bless our beloved bride as she embarks upon this sacred lifelong journey of love and togetherness.
           </p>
 
           <!-- 3-COLUMN METADATA BAR (Date, Time, Venue) -->
@@ -1724,9 +1575,9 @@
                 <circle cx="12" cy="12" r="9"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              <span class="details-day-tag">CEREMONY TIMES</span>
-              <span class="details-main-text" style="font-size: 12.5px;">Sehra Bandi: 12:00 PM</span>
-              <span class="details-sub-text">Barat Departure: 1:00 PM</span>
+              <span class="details-day-tag">TIMINGS</span>
+              <span class="details-main-text" style="font-size: 13.5px;">1:00 PM</span>
+              <span class="details-sub-text">Barat Arrival & Lunch</span>
             </div>
 
             <!-- Venue Column -->
@@ -1735,8 +1586,8 @@
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                 <circle cx="12" cy="9" r="2.5" fill="currentColor"/>
               </svg>
-              <span class="details-main-text" style="font-size: 13.5px;">From Home</span>
-              <span class="details-sub-text">(Groom’s Residence / Rawanagi)</span>
+              <span class="details-main-text" style="font-size: 13.5px;">Sakhi Marriage Hall</span>
+              <span class="details-sub-text">(Ice Cream Chowk, Waris Pura Road, Faisalabad)</span>
             </div>
           </div>
 
@@ -1744,15 +1595,15 @@
 
           <!-- Quick Action Buttons -->
           <div class="card-actions-bar">
-            <button class="card-btn" onclick="addToGoogleCalendar('Barat (Sehra Bandi & Rawanagi) - M. Abubakar Asif', '20261127T120000', '20261127T160000', 'Groom Residence, Faisalabad', 'Barat Departure & Sehra Bandi for M. Abubakar Asif')">
+            <button class="card-btn" onclick="addToGoogleCalendar('Barat Ceremony - Hira Jamil', '20261127T130000', '20261127T170000', 'Sakhi Marriage Hall, Ice Cream Chowk, Waris Pura Road, Faisalabad', 'Barat celebrations of Hira Jamil')">
               <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
               Add to Calendar
             </button>
-            <a class="card-btn" href="https://wa.me/923007626218?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Barat%20of%20M.%20Abubakar%20Asif.%20Kindly%20share%20the%20home%20location%20coordinates." target="_blank" rel="noopener">
+            <a class="card-btn" href="https://wa.me/923236009091?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Barat%20of%20Hira%20Jamil.%20Kindly%20share%20the%20venue%20location%20coordinates%20for%20Sakhi%20Marriage%20Hall." target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              Get Home Directions
+              Get Venue Location
             </a>
-            <a class="card-btn" href="https://wa.me/923007626218?text=Assalam-o-Alaikum!%20Heartfelt%20prayers%20and%20congratulations%20on%20the%20Barat%20of%20M.%20Abubakar%20Asif.%20Looking%20forward%20to%20joining%20you%20for%20Sehra%20Bandi." target="_blank" rel="noopener">
+            <a class="card-btn" href="https://wa.me/923236009091?text=Assalam-o-Alaikum!%20Heartfelt%20prayers%20and%20congratulations%20on%20the%20Barat%20of%20Hira%20Jamil.%20We%20delightfully%20confirm%20our%20attendance." target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
               RSVP via WhatsApp
             </a>
@@ -1760,9 +1611,8 @@
 
           <!-- Bottom Switcher -->
           <div class="explore-other-events">
-            <div class="explore-label">Explore Other Ceremonies</div>
+            <div class="explore-label">Explore Next Ceremony</div>
             <div class="other-events-group">
-              <button class="mini-switch-btn" onclick="selectEvent('mehndi')">🌿 Mehndi Invitation</button>
               <button class="mini-switch-btn" onclick="selectEvent('walima')">👑 Walima Invitation</button>
             </div>
           </div>
@@ -1837,8 +1687,8 @@
 
           <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
 
-          <div class="card-groom-prefix">OF OUR BELOVED GROOM</div>
-          <div class="card-groom-name">M. Abubakar Asif</div>
+          <div class="card-groom-prefix">OF OUR BELOVED BRIDE</div>
+          <div class="card-groom-name">Hira Jamil</div>
 
           <div class="gold-filigree-divider"><span class="gold-flourish-diamond">❖</span></div>
 
@@ -1890,15 +1740,15 @@
 
           <!-- Quick Action Buttons -->
           <div class="card-actions-bar">
-            <button class="card-btn" onclick="addToGoogleCalendar('Walima Reception - M. Abubakar Asif', '20261128T120000', '20261128T160000', 'Al Hayat Marriage Hall, Main Halal Road Near Nusrat Fateh Ali Khan General Hospital, Faisalabad', 'Walima Reception ceremony of M. Abubakar Asif')">
+            <button class="card-btn" onclick="addToGoogleCalendar('Walima Reception - Hira Jamil', '20261128T120000', '20261128T160000', 'Al Hayat Marriage Hall, Main Halal Road Near Nusrat Fateh Ali Khan General Hospital, Faisalabad', 'Walima Reception ceremony of Hira Jamil')">
               <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
               Add to Calendar
             </button>
-            <a class="card-btn" href="https://wa.me/923098857729?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Walima%20Ceremony%20of%20M.%20Abubakar%20Asif.%20Kindly%20share%20the%20venue%20location%20coordinates%20for%20Al%20Hayat%20Marriage%20Hall." target="_blank" rel="noopener">
+            <a class="card-btn" href="https://wa.me/923226014822?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Walima%20Ceremony%20of%20Hira%20Jamil.%20Kindly%20share%20the%20venue%20location%20coordinates%20for%20Al%20Hayat%20Marriage%20Hall." target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
               Get Venue Location
             </a>
-            <a class="card-btn" href="https://wa.me/923098857729?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Walima%20Ceremony%20of%20M.%20Abubakar%20Asif.%20We%20are%20honoured%20to%20attend." target="_blank" rel="noopener">
+            <a class="card-btn" href="https://wa.me/923226014822?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20Walima%20Ceremony%20of%20Hira%20Jamil.%20We%20are%20honoured%20to%20attend." target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
               RSVP via WhatsApp
             </a>
@@ -1906,9 +1756,8 @@
 
           <!-- Bottom Switcher -->
           <div class="explore-other-events">
-            <div class="explore-label">Explore Other Ceremonies</div>
+            <div class="explore-label">Explore Other Ceremony</div>
             <div class="other-events-group">
-              <button class="mini-switch-btn" onclick="selectEvent('mehndi')">🌿 Mehndi Invitation</button>
               <button class="mini-switch-btn" onclick="selectEvent('barat')">🐎 Barat Invitation</button>
             </div>
           </div>
@@ -1954,45 +1803,32 @@
         <p class="rsvp-sub">Your prayers and gracious presence are the greatest gifts to our family</p>
 
         <div class="contact-cards-grid">
-          <!-- Contact 1 -->
+          <!-- Contact 1: Muhammad Jamil -->
           <div class="contact-card">
-            <div class="contact-num">+92 300 7864112</div>
+            <div class="contact-name">Muhammad Jamil</div>
+            <div class="contact-num">+92 323 6009091</div>
             <div class="contact-btn-group">
-              <a href="tel:+923007864112" class="contact-action-btn btn-call">
+              <a href="tel:+923236009091" class="contact-action-btn btn-call">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
                 Call
               </a>
-              <a href="https://wa.me/923007864112?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20wedding%20of%20M.%20Abubakar%20Asif." target="_blank" rel="noopener" class="contact-action-btn btn-whatsapp">
+              <a href="https://wa.me/923236009091?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20wedding%20of%20Hira%20Jamil." target="_blank" rel="noopener" class="contact-action-btn btn-whatsapp">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
                 WhatsApp
               </a>
             </div>
           </div>
 
-          <!-- Contact 2 -->
+          <!-- Contact 2: Muhammad Adeel -->
           <div class="contact-card">
-            <div class="contact-num">+92 300 7626218</div>
+            <div class="contact-name">Muhammad Adeel</div>
+            <div class="contact-num">+92 322 6014822</div>
             <div class="contact-btn-group">
-              <a href="tel:+923007626218" class="contact-action-btn btn-call">
+              <a href="tel:+923226014822" class="contact-action-btn btn-call">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
                 Call
               </a>
-              <a href="https://wa.me/923007626218?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20wedding%20of%20M.%20Abubakar%20Asif." target="_blank" rel="noopener" class="contact-action-btn btn-whatsapp">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
-                WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <!-- Contact 3 -->
-          <div class="contact-card">
-            <div class="contact-num">+92 309 8857729</div>
-            <div class="contact-btn-group">
-              <a href="tel:+923098857729" class="contact-action-btn btn-call">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
-                Call
-              </a>
-              <a href="https://wa.me/923098857729?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20wedding%20of%20M.%20Abubakar%20Asif." target="_blank" rel="noopener" class="contact-action-btn btn-whatsapp">
+              <a href="https://wa.me/923226014822?text=Assalam-o-Alaikum!%20Heartiest%20congratulations%20on%20the%20wedding%20of%20Hira%20Jamil." target="_blank" rel="noopener" class="contact-action-btn btn-whatsapp">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
                 WhatsApp
               </a>
@@ -2004,17 +1840,17 @@
       <!-- Wedding Footer & Blessings -->
       <footer class="wedding-footer">
         <p class="footer-dua">"May Allah bless this union and shower His mercy upon them."</p>
-        <div class="footer-sign">With Love & Duas · Muhammad Abubakar & Family</div>
+        <div class="footer-sign">With Love & Duas · Muhammad Jamil & Family</div>
       </footer>
     </section>
 
   </main>
 
   <!-- ==========================================================================
-       CLIENT-SIDE JAVASCRIPT: LOGIC, 3D TILT, MEHNDI DEFAULT, NO MUSIC / SILENT
+       CLIENT-SIDE JAVASCRIPT: LOGIC, 3D TILT, BARAT DEFAULT, NO MUSIC / SILENT
        ========================================================================== -->
   <script>
-    // --- 1. OPENING ANIMATION: TRANSITION FROM 3D ENVELOPE TO MEHNDI INVITATION ---
+    // --- 1. OPENING ANIMATION: TRANSITION FROM 3D ENVELOPE TO BARAT INVITATION ---
     function openInvitationSuite() {
       const welcome = document.getElementById('welcome-screen');
       const main = document.getElementById('main-content');
@@ -2022,8 +1858,8 @@
       welcome.classList.add('unveiled');
       main.classList.add('visible');
 
-      // ENSURE MEHNDI IS ACTIVATED AND DISPLAYED FIRST BY DEFAULT
-      selectEvent('mehndi');
+      // ENSURE BARAT IS ACTIVATED AND DISPLAYED FIRST BY DEFAULT
+      selectEvent('barat');
 
       // Scroll smoothly to top of invitation suite
       setTimeout(() => {
@@ -2031,10 +1867,10 @@
       }, 350);
     }
 
-    // --- 2. INTERACTIVE EVENT SWITCHER: MEHNDI -> BARAT -> WALIMA ---
+    // --- 2. INTERACTIVE EVENT SWITCHER: BARAT -> WALIMA ---
     function selectEvent(eventId) {
       // Update Tab Buttons
-      const tabIds = ['tab-mehndi', 'tab-barat', 'tab-walima'];
+      const tabIds = ['tab-barat', 'tab-walima'];
       tabIds.forEach(id => {
         const btn = document.getElementById(id);
         if (btn) btn.classList.remove('active');
@@ -2043,7 +1879,7 @@
       if (activeTab) activeTab.classList.add('active');
 
       // Update Card Visibility with 3D Slide / Elevation Animation
-      const cardIds = ['card-mehndi', 'card-barat', 'card-walima'];
+      const cardIds = ['card-barat', 'card-walima'];
       cardIds.forEach(id => {
         const card = document.getElementById(id);
         if (card) {
@@ -2124,9 +1960,9 @@
       window.open(url, '_blank');
     }
 
-    // --- 6. LIVE WEDDING COUNTDOWN TIMER (To November 26, 2026 19:00:00) ---
+    // --- 6. LIVE WEDDING COUNTDOWN TIMER (To November 27, 2026 13:00:00) ---
     function initCountdown() {
-      const weddingDate = new Date('2026-11-26T19:00:00').getTime();
+      const weddingDate = new Date('2026-11-27T13:00:00').getTime();
 
       function update() {
         const now = new Date().getTime();
@@ -2257,9 +2093,9 @@
       }
     });
 
-    // DEFAULT INITIALIZATION: ENSURE MEHNDI IS ACTIVATED BY DEFAULT
+    // DEFAULT INITIALIZATION: ENSURE BARAT IS ACTIVATED BY DEFAULT
     window.addEventListener('DOMContentLoaded', () => {
-      selectEvent('mehndi');
+      selectEvent('barat');
     });
   </script>
 </body>
