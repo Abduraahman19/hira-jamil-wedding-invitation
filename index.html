@@ -246,6 +246,25 @@
       height: 16px;
       fill: currentColor;
     }
+    .control-pill-btn.music-playing {
+      border-color: var(--gold-bright);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.7), 0 0 16px rgba(231,197,100,0.5);
+    }
+    .control-pill-btn.music-playing svg {
+      animation: musicWavePulse 2.2s ease-in-out infinite;
+    }
+    @keyframes musicWavePulse {
+      0%, 100% {
+        transform: scale(1) rotate(0deg);
+      }
+      25% {
+        transform: scale(1.15) rotate(-6deg);
+      }
+      75% {
+        transform: scale(1.15) rotate(6deg);
+      }
+    }
 
     /* ==========================================================================
        SECTION 1: 3D ROYAL WEDDING ENVELOPE UNBOXING EXPERIENCE
@@ -1377,10 +1396,25 @@
     </div>
   </div>
 
+  <!-- Royal Wedding Background Instrumental Audio (Soft & Light Sitar Ambient Tune) -->
+  <audio id="wedding-audio" loop preload="auto" autoplay playsinline>
+    <source src="assets/wedding-tune-sitar.mp3" type="audio/mpeg">
+    <source src="assets/wedding-music.mp3" type="audio/mpeg">
+  </audio>
+
   <!-- ==========================================================================
-       FLOATING INTERACTIVE CONTROLS (Falling Petals Toggle Only)
-       ========================================================================== */ -->
+       FLOATING INTERACTIVE CONTROLS (Tune & Falling Petals Toggles)
+       ========================================================================== -->
   <div class="floating-controls">
+    <button class="control-pill-btn music-playing" id="btn-toggle-music" aria-label="Toggle Wedding Tune">
+      <svg id="music-icon-playing" viewBox="0 0 24 24">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+      </svg>
+      <svg id="music-icon-paused" style="display:none;" viewBox="0 0 24 24">
+        <path d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-1.73l4.73 4.73c-.56.45-1.26.72-2.03.72a3.3 3.3 0 0 1-3.3-3.3v-.45l5.57 5.57L21 20.73 4.27 3zM14 7h4V3h-6v5.18l2 2V7z"/>
+      </svg>
+      <span id="music-text">Music: On</span>
+    </button>
     <button class="control-pill-btn" id="btn-toggle-petals" aria-label="Toggle Falling Petals">
       <svg viewBox="0 0 24 24">
         <path d="M12 2C9.5 5 7 8 7 11.5c0 3 2.2 5.5 5 5.5s5-2.5 5-5.5C17 8 14.5 5 12 2zm0 18c-2.5-1.5-6-3.8-6-7.5 0-.7.1-1.3.3-1.9 1.6 3 4.2 5.2 7.7 5.9-.6 1.8-1.4 3-2 3.5z"/>
@@ -1847,7 +1881,7 @@
   </main>
 
   <!-- ==========================================================================
-       CLIENT-SIDE JAVASCRIPT: LOGIC, 3D TILT, BARAT DEFAULT, NO MUSIC / SILENT
+       CLIENT-SIDE JAVASCRIPT: LOGIC, 3D TILT, BARAT DEFAULT, ROYAL WEDDING TUNE
        ========================================================================== -->
   <script>
     // --- 1. OPENING ANIMATION: TRANSITION FROM 3D ENVELOPE TO BARAT INVITATION ---
@@ -1857,6 +1891,9 @@
 
       welcome.classList.add('unveiled');
       main.classList.add('visible');
+
+      // Start gentle wedding background tune with soft fade-in
+      playWeddingMusic();
 
       // ENSURE BARAT IS ACTIVATED AND DISPLAYED FIRST BY DEFAULT
       selectEvent('barat');
@@ -2093,9 +2130,160 @@
       }
     });
 
-    // DEFAULT INITIALIZATION: ENSURE BARAT IS ACTIVATED BY DEFAULT
+    // ==========================================================================
+    // 8. ROYAL WEDDING BACKGROUND MUSIC (LIGHT & SOFT SITAR INSTRUMENTAL TUNE)
+    // ==========================================================================
+    let bgAudio = null;
+    let isMusicPlaying = false;
+    let userManuallyPaused = false;
+    let musicFadeInterval = null;
+
+    function getAudioElement() {
+      if (!bgAudio) {
+        bgAudio = document.getElementById('wedding-audio');
+      }
+      return bgAudio;
+    }
+
+    function fadeInMusic(targetVolume = 0.20, duration = 1800) {
+      const audio = getAudioElement();
+      if (!audio) return;
+      clearInterval(musicFadeInterval);
+      const stepTime = 50;
+      const steps = duration / stepTime;
+      const volumeStep = targetVolume / steps;
+      audio.volume = 0;
+
+      musicFadeInterval = setInterval(() => {
+        if (!audio || !isMusicPlaying) {
+          clearInterval(musicFadeInterval);
+          return;
+        }
+        if (audio.volume + volumeStep >= targetVolume) {
+          audio.volume = targetVolume;
+          clearInterval(musicFadeInterval);
+        } else {
+          audio.volume = Math.min(targetVolume, audio.volume + volumeStep);
+        }
+      }, stepTime);
+    }
+
+    function fadeOutMusic(duration = 450, callback) {
+      const audio = getAudioElement();
+      if (!audio) {
+        if (callback) callback();
+        return;
+      }
+      clearInterval(musicFadeInterval);
+      const stepTime = 50;
+      const steps = duration / stepTime;
+      const volumeStep = audio.volume / steps;
+
+      musicFadeInterval = setInterval(() => {
+        if (!audio) {
+          clearInterval(musicFadeInterval);
+          if (callback) callback();
+          return;
+        }
+        if (audio.volume - volumeStep <= 0.02) {
+          audio.volume = 0;
+          clearInterval(musicFadeInterval);
+          audio.pause();
+          if (callback) callback();
+        } else {
+          audio.volume = Math.max(0, audio.volume - volumeStep);
+        }
+      }, stepTime);
+    }
+
+    function playWeddingMusic() {
+      if (userManuallyPaused) return;
+      const audio = getAudioElement();
+      if (!audio || isMusicPlaying) return;
+
+      audio.volume = 0;
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          isMusicPlaying = true;
+          updateMusicButtonUI(true);
+          fadeInMusic(0.20, 1800);
+        }).catch(err => {
+          console.log('Autoplay deferred until initial gesture:', err);
+        });
+      }
+    }
+
+    function toggleWeddingMusic() {
+      const audio = getAudioElement();
+      if (!audio) return;
+
+      if (isMusicPlaying) {
+        userManuallyPaused = true;
+        fadeOutMusic(400, () => {
+          isMusicPlaying = false;
+          updateMusicButtonUI(false);
+        });
+      } else {
+        userManuallyPaused = false;
+        audio.volume = 0;
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            isMusicPlaying = true;
+            updateMusicButtonUI(true);
+            fadeInMusic(0.20, 1200);
+          }).catch(err => {
+            console.log('Playback error:', err);
+          });
+        }
+      }
+    }
+
+    function updateMusicButtonUI(isPlaying) {
+      const musicBtn = document.getElementById('btn-toggle-music');
+      const musicText = document.getElementById('music-text');
+      const iconPlaying = document.getElementById('music-icon-playing');
+      const iconPaused = document.getElementById('music-icon-paused');
+
+      if (!musicBtn) return;
+
+      if (isPlaying) {
+        musicBtn.classList.add('music-playing');
+        if (musicText) musicText.textContent = 'Music: On';
+        if (iconPlaying) iconPlaying.style.display = 'block';
+        if (iconPaused) iconPaused.style.display = 'none';
+      } else {
+        musicBtn.classList.remove('music-playing');
+        if (musicText) musicText.textContent = 'Music: Off';
+        if (iconPlaying) iconPlaying.style.display = 'none';
+        if (iconPaused) iconPaused.style.display = 'block';
+      }
+    }
+
+    const musicBtn = document.getElementById('btn-toggle-music');
+    if (musicBtn) {
+      musicBtn.addEventListener('click', toggleWeddingMusic);
+    }
+
+    // Unconditional start upon ANY interaction anywhere on the screen
+    function startAudioOnFirstInteraction() {
+      if (!userManuallyPaused && !isMusicPlaying) {
+        playWeddingMusic();
+      }
+    }
+    ['click', 'touchstart', 'touchend', 'pointerdown', 'keydown', 'scroll'].forEach(evt => {
+      window.addEventListener(evt, startAudioOnFirstInteraction, { passive: true });
+      document.addEventListener(evt, startAudioOnFirstInteraction, { passive: true });
+    });
+
+    // DEFAULT INITIALIZATION: ENSURE BARAT IS ACTIVATED AND ATTEMPT PLAY ON LOAD
     window.addEventListener('DOMContentLoaded', () => {
       selectEvent('barat');
+      playWeddingMusic();
+    });
+    window.addEventListener('load', () => {
+      playWeddingMusic();
     });
   </script>
 </body>
